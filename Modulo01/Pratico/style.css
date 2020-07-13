@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 300px;
+
+    margin: 0 auto;
+    padding: 5px;
+
+    background: white;  
+}
+
+.container .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 15%;
+}
+
+.container .items span {
+    width: 120px;
+
+    font-weight: bold;
+}
+
+.container .items input {
+    margin-left: 15px;
+}
+
+.container .items input[type="range"] {
+    width: 150px;
+}
+
+.container .items input[type="text"] {
+    width: 50px;
+}
+
+#red {
+    color: red;
+}
+
+#green {
+    color: green;
+}
+
+#blue {
+    color: blue;
+}
+
+#color {
+    width: 150px;
+    height: 150px;
+
+    margin: 20px auto;
+
+    border: 5px solid black;
+}
