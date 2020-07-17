@@ -16,79 +16,25 @@
     <div class="container">
         <div class="items">
             <span id="red">(R) Vermelho:</span>
-            <input type="range" min=0 max=255 value=0 name="" id="range-red">
+            <input type="range" min="0" max="255" value="0" name="" id="range-red">
             <input type="text" name="" id="text-red" disabled>
         </div>
 
         <div class="items">
             <span id="green">(G) Verde:</span>
-            <input type="range" min=0 max=255 value=0 name="" id="range-green">
+            <input type="range" min="0" max="255" value="0" name="" id="range-green">
             <input type="text" name="" id="text-green" disabled>
         </div>
 
         <div class="items">
             <span id="blue">(B) Azul:</span>
-            <input type="range" min=0 max=255 value=0 name="" id="range-blue">
+            <input type="range" min="0" max="255" value="0" name="" id="range-blue">
             <input type="text" name="" id="text-blue" disabled>
         </div>
         <div id="color"></div>
     </div>
 
-    <script>
-
-        window.addEventListener("load", () => {
-            const inputs = document.querySelectorAll('input[type="range"]')
-
-            inputs.forEach(input => {
-                input.value = 0
-
-                input.addEventListener('input', () => {
-                    const inputValue = document.querySelectorAll('input[type="text"]')
-                    const divColor = document.getElementById('color')
-
-                    const red = inputs[0].value
-                    const green = inputs[1].value
-                    const blue = inputs[2].value
-
-                    inputValue[0].value = red
-                    inputValue[1].value = green
-                    inputValue[2].value = blue
-
-                    inputs[0].style.backgroundColor = `rgb(${red}, 0, 0)`
-                    inputs[1].style.backgroundColor = `rgb(0, ${green}, 0)`
-                    inputs[2].style.backgroundColor = `rgb(0, 0, ${blue})`
-
-                    divColor.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
-                })
-            })
-        })
-
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
-
-<!-- 
-// const inputs = document.querySelectorAll('input[type="range"]')
-
-// inputs.forEach(input => {
-//     input.addEventListener('input', () => {
-//         const outputs = document.querySelectorAll('input[type="text"]')
-//         const result = document.getElementById('color')
-
-//         const red = inputs[0].value
-//         const green = inputs[1].value
-//         const blue = inputs[2].value
-
-//         outputs[0].value = red
-//         outputs[1].value = green
-//         outputs[2].value = blue
-
-//         inputs[0].style.backgroundColor = `rgb(${red}, 0, 0)`
-//         inputs[1].style.backgroundColor = `rgb(0, ${green}, 0)`
-//         inputs[2].style.backgroundColor = `rgb(0, 0, ${blue})`
-
-//         result.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
-//     })
-// })
-// }) -->
