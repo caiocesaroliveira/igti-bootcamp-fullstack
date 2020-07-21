@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1 - Desafio</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="center-align">Pesquisa de Usuários</h1>
+    </header>
+    <main>
+        <section class="fields">
+            <div class="row">
+                <div class="input-field col s11">
+                    <input id="input-name" type="text" class="validate">
+                    <label for="input-name">Busca</label>
+                </div>
+
+                <div class="input-field col s1">
+                    <a class="waves-effect waves-light btn disabled" id="btn-search">BUSCAR</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="user-container">
+            <div class="user-panel">
+                <h2 id=label-users>Nenhum usuário filtrado</h2>
+                <div id="tab-users"></div>
+            </div>
+
+            <div class="statistic-panel">
+                <h2 id="label-statistics">Nada a ser exibido</h2>
+                <div id="tab-statistics"></div>
+            </div>
+            </div>
+    </main>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
