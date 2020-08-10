@@ -1,0 +1,19 @@
+{
+  "name": "02_Desafio",
+  "version": "1.0.0",
+  "description": "Exercitar os conceitos trabalhados no módulo para criação de uma API, criando endpoints\r utilizando Node.js e Express.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
