@@ -95,6 +95,7 @@ function calculateSalaryFrom(fullSalary) {
   const percentageIRPF = fullSalary === 0 ? 0 : discountIRPF / fullSalary
 
   const netSalary = baseINSS - discountINSS - discountIRPF
+  const percentageNetSalary = netSalary / fullSalary
 
   return {
     baseINSS,
@@ -104,6 +105,7 @@ function calculateSalaryFrom(fullSalary) {
     discountIRPF,
     percentageIRPF,
     netSalary,
+    percentageNetSalary,
   }
 }
 

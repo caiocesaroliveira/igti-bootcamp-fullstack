@@ -23,6 +23,7 @@ export default class App extends Component {
 
     const {
       netSalary,
+      percentageNetSalary,
       baseINSS,
       discountINSS,
       percentageINSS,
@@ -73,6 +74,7 @@ export default class App extends Component {
               id="netSalary"
               label="Salário Líquido:"
               value={netSalary}
+              percentage={percentageNetSalary}
               color={netColor}
             />
           </div>

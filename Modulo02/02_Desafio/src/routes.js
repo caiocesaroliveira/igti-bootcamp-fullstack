@@ -32,7 +32,7 @@ router.get("/:id", async (req, res) => {
 })
 
 router.post("/", async (req, res) => {
-  const { student, subject, type, value } = req.body
+  const newGrade = req.body
   let grade = null
 
   try {
@@ -40,11 +40,8 @@ router.post("/", async (req, res) => {
 
     grade = {
       id: data.nextId++,
-      student,
-      subject,
-      type,
-      value,
       timestamp: new Date(),
+      ...newGrade,
     }
 
     data.grades.push(grade)
