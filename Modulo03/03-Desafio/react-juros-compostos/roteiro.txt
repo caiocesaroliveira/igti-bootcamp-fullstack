@@ -1,0 +1,35 @@
+Roteiro - React - Juros Compostos
+=================================
+(✔)
+
+(✔) Criar 4 componentes
+  (✔) App
+  (✔) Form
+  (✔) Installments (parcelas)
+  (✔) Installment (parcela) 
+
+() Componente <Installment />
+  () Implementar o label que representa o nº parcela 
+  () Implementar o label que representa o Valor Final
+  () Implementar o label que representa o Valor Rendimento/Depreciacao
+  () Implementar o label que representa o Percentual Rendimento/Depreciacao
+
+(✔) Componente <Installments />
+  (✔) Implementar componente <Installment />
+
+(✔) Componente <Form />
+  (✔) Implementar input que represenata o Capital Inicial
+  (✔) Implementar input que represenata a Taxa de Juros
+  (✔) Implementar input que represenata o Período (em meses)
+
+(✔) Componente <App />
+  (✔) Implementar o Titulo
+  (✔) Implementar compoenente <Form />
+  (✔) Implementar compoenente <Installments />
+
+() Usar useEffect utilizando os deps para calculo das parcelas
+
+
+Refactor
+() Criar componente Input    
+
