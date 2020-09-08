@@ -142,4 +142,38 @@ module.exports = {
       return res.status(400).json({ erro: error })
     }
   },
+
+  async findByDescription(req, res) {
+    const { period, description } = req.query
+
+    if (!period)
+      return res
+        .status(400)
+        .json({ messagem: "Parâmetro 'períod' não informado" })
+
+    // if (!description)
+    //   return res
+    //     .status(400)
+    //     .json({ messagem: "Parâmetro 'description' não informado" })
+
+    const filteredDescription = description
+      ? {
+          yearMonth: period,
+          description: { $regex: new RegExp(description), $options: "i" },
+        }
+      : { yearMonth: period }
+
+    console.log(filteredDescription)
+    try {
+      const transaction = await TransactionModel.find(filteredDescription).sort(
+        {
+          yearMonthDay: 1,
+        }
+      )
+
+      return res.status(200).json(transaction)
+    } catch (error) {
+      return res.status(400).json({ erro: error })
+    }
+  },
 }

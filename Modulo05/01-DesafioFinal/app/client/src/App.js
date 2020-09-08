@@ -1,5 +1,10 @@
-import React from 'react';
+import React from "react"
+import Form from "./components/Form"
 
 export default function App() {
-  return <h1>Desafio Final do Bootcamp Full Stack</h1>;
+  return (
+    <div className="container">
+      <Form />
+    </div>
+  )
 }
