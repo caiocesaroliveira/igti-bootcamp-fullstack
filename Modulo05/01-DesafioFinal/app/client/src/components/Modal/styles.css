@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h4 {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.container-form {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.container-input-radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.input-radio {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 20px;
+}
+
+.input-radio .span {
+  color: rgb(192, 57, 43);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.container-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-input-value {
+  margin-right: 10px;
+}
