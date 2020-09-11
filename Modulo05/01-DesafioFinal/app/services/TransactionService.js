@@ -19,10 +19,33 @@ module.exports = {
 
     try {
       const transaction = await TransactionModel.find({
-        yearMonth: period,
+        year: 2021,
       }).sort({ yearMonthDay: 1 })
 
-      return res.status(200).json(transaction)
+      const getTotalRevenue = () => {
+        return transaction
+          .filter((item) => {
+            return item.type === "+"
+          })
+          .reduce((acc, curr) => {
+            return acc + curr.value
+          }, 0)
+      }
+
+      const getTotalCoast = () => {
+        return transaction
+          .filter((item) => {
+            return item.type === "-"
+          })
+          .reduce((acc, curr) => {
+            return acc + curr.value
+          }, 0)
+      }
+
+      const totalCoast = getTotalCoast()
+      const totalRevenue = getTotalRevenue()
+
+      return res.status(200).send({ totalRevenue, totalCoast })
     } catch (error) {
       return res.status(400).json({ erro: error })
     }
@@ -159,11 +182,10 @@ module.exports = {
     const filteredDescription = description
       ? {
           yearMonth: period,
-          description: { $regex: new RegExp(description), $options: "i" },
+          category: { $regex: new RegExp(description), $options: "i" },
         }
       : { yearMonth: period }
 
-    console.log(filteredDescription)
     try {
       const transaction = await TransactionModel.find(filteredDescription).sort(
         {
